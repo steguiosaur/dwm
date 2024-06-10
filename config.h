@@ -78,6 +78,7 @@ static const char *brightnessup[]   = { "/usr/bin/brightnessctl", "set", "+5%", 
 
 #include <X11/XF86keysym.h>
 #include "shift-tools.c"
+#include "push.c"
 static const Key keys[] = {
 	/* modifier         key        function        argument */
 	{ MODKEY,           XK_d,      spawn,          {.v = dmenucmd } },
@@ -87,10 +88,14 @@ static const Key keys[] = {
 	{ MODKEY,           XK_w,      spawn,          {.v = browser} },
     { 0,                XK_Print,  spawn,          {.v = screenshot} },
 	{ MODKEY,           XK_p,      togglebar,      {0} },
-	{ MODKEY,           XK_k,      focusstack,     {.i = +1 } },
-	{ MODKEY,           XK_j,      focusstack,     {.i = -1 } },
+	{ MODKEY|ShiftMask, XK_j,      pushdown,       {0} },
+	{ MODKEY|ShiftMask, XK_k,      pushup,         {0} },
+	{ MODKEY,           XK_j,      focusstack,     {.i = +1 } },
+	{ MODKEY,           XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,           XK_Up,     incnmaster,     {.i = +1 } },
 	{ MODKEY,           XK_Down,   incnmaster,     {.i = -1 } },
+	{ MODKEY|ShiftMask, XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY|ShiftMask, XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask, XK_Left,   setmfact,       {.f = -0.05} },
 	{ MODKEY|ShiftMask, XK_Right,  setmfact,       {.f = +0.05} },
 	{ MODKEY,           XK_Tab,    view,           {.i = +1} },
