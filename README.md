@@ -1,17 +1,12 @@
-# Dynamic Window Manager
+# dwm - dynamic window manager
 
-dwm configuration by steguiosaur
+**dwm** configuration by steguiosaur
 
-## Patches
+dwm is an extremely fast, small, and dynamic window manager for X.
 
-- `dwm-actualfullscreen-20211013-cb3f58a.diff`
-- `dwm-alttagsdecoration-2020010304-cb3f58a.diff`
-- `dwm-alwayscenter-20200625-f04cac6.diff`
-- `dwm-bar-height-6.2.diff`
-- `dwm-barpadding-20211020-a786211.diff`
-- `dwm-fullgaps-6.4.diff`
-- `dwm-push-20160731-56a31dc.diff`
-- `dwm-swallow-6.3.diff`
+## Requirements
+
+In order to build dwm you need the Xlib header files.
 
 ## Install
 
@@ -32,3 +27,13 @@ Visit dwm patches at [https://dwm.suckless.org/patches/](https://dwm.suckless.or
 ```console
 patch -p1 < st-patch.diff
 ```
+
+- `dwm-actualfullscreen-20211013-cb3f58a.diff`
+- `dwm-alttagsdecoration-2020010304-cb3f58a.diff`
+- `dwm-alwayscenter-20200625-f04cac6.diff`
+- `dwm-bar-height-6.2.diff`
+- `dwm-barpadding-20211020-a786211.diff`
+- `dwm-fullgaps-6.4.diff`
+- `dwm-push-20160731-56a31dc.diff`
+- `dwm-swallow-6.3.diff`
+
